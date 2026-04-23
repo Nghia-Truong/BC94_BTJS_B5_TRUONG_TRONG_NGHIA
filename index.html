@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="container border border-black border-2">
+        <h3>Quản Lý Tuyển Sinh</h3>
+        <input
+          type="number"
+          id="diemChuan"
+          placeholder="Nhập điểm chuẩn"
+          class="block mx-4 my-4 px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+        />
+        <input
+          type="number"
+          id="diemMon1"
+          placeholder="Nhập điểm môn 1"
+          class="block mx-4 my-4 px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+        />
+        <input
+          type="number"
+          id="diemMon2"
+          placeholder="Nhập điểm môn 2"
+          class="block mx-4 my-4 px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+        />
+        <input
+          type="number"
+          id="diemMon3"
+          placeholder="Nhập điểm môn 3"
+          class="block mx-4 my-4 px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+        />
+        <div class="input-group">
+          <select
+            id="diemKhuVuc"
+            class="custom-select block mx-4 my-4 px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+          >
+            <option value="0">Chọn Khu Vực</option>
+            <option value="2">A</option>
+            <option value="1">B</option>
+            <option value="0.5">C</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <select
+            id="diemDoiTuong"
+            class="custom-select block mx-4 my-4 px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+          >
+            <option value="0">Chọn Đối Tượng</option>
+            <option value="2">1</option>
+            <option value="1">2</option>
+            <option value="0.5">3</option>
+          </select>
+        </div>
+        <button id="tinhDiem" class="btn-success block mx-4 my-4 px-3 py-2.5">
+          Tính Điểm
+        </button>
+        <p class="mx-4 my-4 px-3 py-2.5">Kết Quả: <span id="ketQua"></span></p>
+        <p class="mx-4 my-4 px-3 py-2.5">
+          Tổng Điểm: <span id="tongDiem"></span>
+        </p>
+      </div>
+      <div class="mt-5 container border border-black border-2">
+        <h3>Tính Tiền Điện</h3>
+        <input type="text" placeholder="Tên" />
+        <input id="soKw" type="number" placeholder="Số Kw" />
+        <button
+          id="tinhTienDien"
+          class="btn-success block mx-4 my-4 px-3 py-2.5"
+        >
+          Tính Tiền Điện
+        </button>
+        <p class="mx-4 my-4 px-3 py-2.5">
+          Tổng Tiền Điện: <span id="tongTienDien"></span>
+        </p>
+      </div>
+    </main>
+    <script src="./main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
