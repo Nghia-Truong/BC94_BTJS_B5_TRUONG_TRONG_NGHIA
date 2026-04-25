@@ -1,4 +1,12 @@
 // Quản lý tuyển sinh
+/*input : diemChuan, diemMon1, diemMon2, diemMon3, diemKhuVuc, diemDoiTuong
+progress:
++ tinhDiem
++ So sánh điều kiện để biết đậu rớt
+output:
++ ketQua
++ tongDiem*/
+
 
 document.getElementById("tinhDiem").onclick = function () {
     let diemChuan = document.getElementById("diemChuan").value*1;
@@ -19,7 +27,12 @@ document.getElementById("tinhDiem").onclick = function () {
     document.getElementById("tongDiem").innerHTML = tongDiem;}
 
 
-    // tính tiền điện
+// tính tiền điện
+/*input : soKW
+progress:
++ dùng If để tính tien dien
+output:
++ Tiền Điện*/    
 
     document.getElementById("tinhTienDien").onclick = function () {
        
@@ -42,6 +55,13 @@ document.getElementById("tinhDiem").onclick = function () {
     }
 
     // Tính thuế thu nhập cá nhân
+/*input : hoTen, thuNhapNam, nguoiPhuThuoc
+progress:
++ tính thu nhập chịu thuế
++ dùng If để tính tien thue
++ làm tròn tiền thuế
+output:
++ xuất kết quả*/  
     document.getElementById("tinhThue").onclick = function () {
         let hoTen = document.getElementById("hoTen");
         let thuNhapNam = document.getElementById("thuNhapNam").value*1;
@@ -67,6 +87,12 @@ document.getElementById("tinhDiem").onclick = function () {
     }
 
     // Tính tiền Cáp
+/*input : maKhachHang, soKenhCaoCap, so KetNoi, loaiKhachHang
+progress:
++ Dựa vào loại khách hàng để bật tắt số kết nối
++ dùng If để tính tien cap
+output:
++ Tiền cáp*/  
     document.getElementById("loaiKhachHang").onclick = function () {
         let loaiKhachHang = document.getElementById("loaiKhachHang").value;
         switch (loaiKhachHang) {
