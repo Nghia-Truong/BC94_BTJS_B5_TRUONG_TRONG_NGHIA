@@ -40,3 +40,60 @@ document.getElementById("tinhDiem").onclick = function () {
 
         document.getElementById("tongTienDien").innerHTML = tongTienDien + " VND";
     }
+
+    // Tính thuế thu nhập cá nhân
+    document.getElementById("tinhThue").onclick = function () {
+        let hoTen = document.getElementById("hoTen");
+        let thuNhapNam = document.getElementById("thuNhapNam").value*1;
+        let nguoiPhuThuoc = document.getElementById("nguoiPhuThuoc").value*1;
+        let thuNhapChiuThue = thuNhapNam - 4 - nguoiPhuThuoc * 16;
+        let tienThue;
+        if (thuNhapChiuThue <=60){
+            tienThue = thuNhapChiuThue * 0.05;
+        } else if (60<thuNhapChiuThue <= 120){
+            tienThue = thuNhapChiuThue * 0.1;
+        } else if (120<thuNhapChiuThue <= 210){
+            tienThue = thuNhapChiuThue * 0.15;
+        } else if (210<thuNhapChiuThue <= 384){
+            tienThue = thuNhapChiuThue * 0.2;
+        } else if (384<thuNhapChiuThue <= 624){
+            tienThue = thuNhapChiuThue * 0.25;
+        } else if (624<thuNhapChiuThue <= 960){
+            tienThue = thuNhapChiuThue * 0.3;
+        } else if (thuNhapChiuThue > 960){
+            tienThue = thuNhapChiuThue * 0.35;
+        };        
+        document.getElementById("tongTienThue").innerHTML = Number(tienThue.toFixed(2)) + "Triệu VND";
+    }
+
+    // Tính tiền Cáp
+    document.getElementById("loaiKhachHang").onclick = function () {
+        let loaiKhachHang = document.getElementById("loaiKhachHang").value;
+        switch (loaiKhachHang) {
+                case "nhaDan":
+                    document.getElementById("soKetNoi").style.display = "none";
+                    break;
+                
+                default:
+                    document.getElementById("soKetNoi").style.display = "inline-block";
+                    break;
+            }  
+    }
+    
+    document.getElementById("tinhTienCap").onclick = function () {
+        let maKhachHang = document.getElementById("maKhachHang").value;
+        let soKenhCaoCap = document.getElementById("soKenhCaoCap").value*1;
+        let loaiKhachHang = document.getElementById("loaiKhachHang").value;
+        let soKetNoi = document.getElementById("soKetNoi").value*1;
+        let tienCap;
+        switch (loaiKhachHang) {
+                case "nhaDan":
+                    tienCap = 4.5 + 20.5 + soKenhCaoCap * 7.5;
+                    break;
+                
+                default:
+                    tienCap =(soKetNoi <= 10)? 15 + 20.5 + 75 + soKenhCaoCap * 50 : 15 + 20.5 + 75 + (soKetNoi-10)*5 + soKenhCaoCap * 50; ;                    
+                    break;
+            }
+        document.getElementById("tienCap").innerHTML = tienCap + " $";
+    }

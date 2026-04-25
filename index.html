@@ -17,7 +17,8 @@
 
   <body>
     <main>
-      <div class="container border border-black border-2">
+      <!-- Quản lý tuyển sinh -->
+      <div class="mt-5 container border border-black border-2">
         <h3>Quản Lý Tuyển Sinh</h3>
         <input
           type="number"
@@ -73,6 +74,7 @@
           Tổng Điểm: <span id="tongDiem"></span>
         </p>
       </div>
+      <!-- Tính tiền điện -->
       <div class="mt-5 container border border-black border-2">
         <h3>Tính Tiền Điện</h3>
         <input type="text" placeholder="Tên" />
@@ -86,6 +88,69 @@
         <p class="mx-4 my-4 px-3 py-2.5">
           Tổng Tiền Điện: <span id="tongTienDien"></span>
         </p>
+      </div>
+      <!-- Tính thuế thu nhập cá nhân -->
+      <div class="mt-5 container border border-black border-2">
+        <h3>Tính thuế thu nhập cá nhân</h3>
+        <input id="hoTen" type="text" placeholder="Họ Tên" />
+        <input
+          id="thuNhapNam"
+          type="number"
+          placeholder="Tổng Thu Nhập Năm (Triệu)"
+        />
+        <input
+          id="nguoiPhuThuoc"
+          type="number"
+          placeholder="Số Người Phụ Thuộc"
+        />
+        <button id="tinhThue" class="btn-success block mx-4 my-4 px-3 py-2.5">
+          Tính Tiền Thuế
+        </button>
+        <p class="mx-4 my-4 px-3 py-2.5">
+          Thuế Thu Nhập Cá Nhân: <span id="tongTienThue"></span>
+        </p>
+      </div>
+
+      <!-- Tính tiền cáp -->
+
+      <div class="my-5 container border border-black border-2">
+        <h3>Tính tiền Cáp</h3>
+        <input
+          type="number"
+          id="maKhachHang"
+          placeholder="Nhập Mã Khách Hàng"
+          class="block mx-4 my-4 px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+        />
+        <input
+          type="number"
+          id="soKenhCaoCap"
+          placeholder="Số Kênh Cao Cấp"
+          class="block mx-4 my-4 px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+        />
+        <input
+          type="number"
+          id="soKetNoi"
+          placeholder="Số Kết Nối"
+          class="block mx-4 my-4 px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+        />
+
+        <div class="input-group">
+          <select
+            id="loaiKhachHang"
+            class="custom-select block mx-4 my-4 px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body"
+          >
+            <option value="0">Chọn Loại Khách Hàng</option>
+            <option value="nhaDan">Nhà Dân</option>
+            <option value="doanhNghiep">Doanh Nghiệp</option>
+          </select>
+        </div>
+        <button
+          id="tinhTienCap"
+          class="btn-success block mx-4 my-4 px-3 py-2.5"
+        >
+          Tính Tiền Cáp
+        </button>
+        <p class="mx-4 my-4 px-3 py-2.5">Kết Quả: <span id="tienCap"></span></p>
       </div>
     </main>
     <script src="./main.js"></script>
